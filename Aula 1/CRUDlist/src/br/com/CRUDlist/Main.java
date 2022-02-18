@@ -53,7 +53,7 @@ public class Main {
 		}
 
 		// Updating values of the list using - UPDATE
-		cars.set(1, car2);
+		cars.set(1, car3);
 
 		System.out.println("\n");
 		for (Car c : cars) {

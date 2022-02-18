@@ -38,27 +38,33 @@ public class MenuExercise {
 				String color = scan.next();
 				car1.setColor(color);
 				cars.add(car1);
-				System.out.println(cars);
 				
 				break;
 
 			case 2:
 
-				
+				System.out.println(cars);
 				
 				break;
 
 			case 3:
 
-				
+				System.out.println("Nothing yet");				
 				
 				break;
 
 			case 4:
-
 				
+				System.out.println(cars);
+				System.out.println("Which position you want to delete (positions start from 0)");
+				Integer delete = scan.nextInt();
+				cars.remove(delete);
 				
 				break;
+				
+				default:
+					
+				System.out.println("Invalid Option");
 
 			}
 		}
