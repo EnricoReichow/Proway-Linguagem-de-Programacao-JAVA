@@ -10,7 +10,7 @@ public class MenuExercise {
 
 		Scanner scan = new Scanner(System.in);
 		List<Car> cars = new ArrayList<Car>();
-		Car car1 = new Car();
+		Car car;
 		
 		Integer option = 1;
 		
@@ -29,43 +29,66 @@ public class MenuExercise {
 			case 1:
 				
 				System.out.println("Type your car model:");
+				car = new Car();
 				String model = scan.next();
-				car1.setModel(model);
+				car.setModel(model);
 				System.out.println("Type your car year:");;
 				String year = scan.next();
-				car1.setYear(year);
+				car.setYear(year);
 				System.out.println("Type your car color:");
 				String color = scan.next();
-				car1.setColor(color);
-				cars.add(car1);
+				car.setColor(color);
+				cars.add(car);
+				System.out.println(cars);
 				
 				break;
 
 			case 2:
+				
+				System.out.println("Showing registered cars:");
+				for (Car c : cars) {
+					System.out.println(c.toString());
 
-				System.out.println(cars);
+				}
 				
 				break;
 
 			case 3:
 
-				System.out.println("Nothing yet");				
+				for (Car c : cars) {
+					System.out.println(c.toString());
+
+				}
+				System.out.println("Type the index you want to delete (the index starts from 0)");
+				int index = scan.nextInt();
+				
+				System.out.println("Type the new model:");
+				car.setModel(scan.next());
+				System.out.println("Type the color:");
+				car.setColor(scan.next());
+				System.out.println("Then, the year of fabrication");
+				car.setYear(scan.next());
+				
+				//car = new Car;
 				
 				break;
 
 			case 4:
-				
-				System.out.println(cars);
+
+				for (Car c : cars) {
+					System.out.println(c.toString());
+				}
 				System.out.println("Which position you want to delete (positions start from 0)");
 				Integer delete = scan.nextInt();
 				cars.remove(delete);
 				
 				break;
+
+			default:
 				
-				default:
-					
 				System.out.println("Invalid Option");
 
+				
 			}
 		}
 	}
