@@ -1,0 +1,7 @@
+create table product(
+	id SERIAL,
+	description VARCHAR(50),
+	CONSTRAINT pk_product PRIMARY KEY (id)
+);
+
+SELECT * FROM product
