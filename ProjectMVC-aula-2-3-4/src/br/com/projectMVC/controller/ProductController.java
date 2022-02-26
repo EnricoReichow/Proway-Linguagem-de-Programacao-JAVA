@@ -69,9 +69,27 @@ public class ProductController {
 		try {
 			GenericDAO dao = new ProductDAOImpl();
 			dao.delete(id);
+			System.out.println("Successfull DELETE");
 		} catch (Exception e) {
 			System.out.println("Problems to delete produto! ERROR: " +e.getMessage());
 			e.printStackTrace();
+		}
+	}
+	
+	public void update(Product product) {
+		try {
+
+			GenericDAO dao = new ProductDAOImpl();
+			boolean returning = dao.update(product);
+
+			if (returning == true) {
+				System.out.println("Successfull UPDATE");
+			}
+
+		} catch (Exception e) {
+			System.out.println("Problems to Update a product! ERROR: " + e.getMessage());
+			e.printStackTrace();
+
 		}
 	}
 	

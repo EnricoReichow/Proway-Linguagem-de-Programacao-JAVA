@@ -50,7 +50,7 @@ public class ProductDAOImpl implements GenericDAO {
 			while (rs.next()) {
 				// creating a object of the class Product
 				Product product = new Product();
-				product.setId(rs.getInt("id")); // "happy routine"
+				product.setId(rs.getInt("id"));                                         // "happy routine"
 				product.setDescription(rs.getString("description"));
 				list.add(product);
 			}
@@ -157,8 +157,28 @@ public class ProductDAOImpl implements GenericDAO {
 
 	@Override
 	public Boolean update(Object object) {
-		// TODO Auto-generated method stub
-		return null;
+		Product product = (Product) object;
+		PreparedStatement stmt = null;
+		String sql = "UPDATE product SET description = ? WHERE id = ?";
+		try {
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, product.getDescription());
+			stmt.setInt(2, product.getId());
+			stmt.execute();
+			return true;
+		} catch (Exception e) {
+			System.out.println("Problems in the DAO and to change the Product! ERROR: " + e.getMessage());
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				ConnectionFactory.closeConnection(conn, stmt);
+			} catch (Exception e) {
+				System.out.println("Problems to close connection! ERROR: " + e.getMessage());
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 	@Override

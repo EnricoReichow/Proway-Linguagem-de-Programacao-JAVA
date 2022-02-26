@@ -5,3 +5,12 @@ create table product(
 );
 
 SELECT * FROM product
+
+CREATE TABLE
+(
+    id SERIAL,
+    name VARCHAR (50) 
+    adress VARCHAR(50) 
+    status boolean,
+    CONSTRAINT pk_client PRIMARY KEY (id)
+);
