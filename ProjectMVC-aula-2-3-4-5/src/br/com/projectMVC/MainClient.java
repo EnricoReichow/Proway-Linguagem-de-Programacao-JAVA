@@ -35,7 +35,13 @@ public class MainClient {
 		switch (option) {
 
 		case 1:
-			System.out.println("Teste switch case");
+			System.out.println("Inform the client name:");
+			client.setName(scan.next());
+			System.out.println("Now the client address:");
+			client.setAddress(scan.next());
+			System.out.println("And to finish, the status of the client(Type: true - I'm already a client || false - First contact)");
+			client.setStatus(scan.nextBoolean());
+			controller.insert(client);
 			break;
 
 //

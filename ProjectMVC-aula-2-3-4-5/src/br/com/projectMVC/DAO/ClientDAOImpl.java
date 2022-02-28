@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.projectMVC.model.Client;
-import br.com.projectMVC.model.Product;
 import br.com.projectMVC.util.ConnectionFactory;
 
 	public class ClientDAOImpl implements GenericDAO {
