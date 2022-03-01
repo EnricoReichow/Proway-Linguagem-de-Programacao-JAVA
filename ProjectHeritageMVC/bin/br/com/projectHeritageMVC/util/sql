@@ -1,0 +1,21 @@
+CREATE TABLE customer
+(
+    id SERIAL,
+    name VARCHAR (50), 
+    address VARCHAR(50), 
+    status boolean,
+    cpf VARCHAR (50),
+    rg VARCHAR (50), 
+    CONSTRAINT pk_customer PRIMARY KEY (id)
+);
+
+CREATE TABLE provider
+(
+    id SERIAL,
+    name VARCHAR (50), 
+    address VARCHAR(50), 
+    status boolean,
+    cnpj VARCHAR (50),
+    openCapital VARCHAR (50), 
+    CONSTRAINT pk_provider PRIMARY KEY (id)
+);
