@@ -6,11 +6,11 @@ create table product(
 
 SELECT * FROM product
 
-CREATE TABLE
+CREATE TABLE client
 (
     id SERIAL,
-    name VARCHAR (50) 
-    adress VARCHAR(50) 
+    name VARCHAR (50),
+    address VARCHAR(50),
     status boolean,
     CONSTRAINT pk_client PRIMARY KEY (id)
 );

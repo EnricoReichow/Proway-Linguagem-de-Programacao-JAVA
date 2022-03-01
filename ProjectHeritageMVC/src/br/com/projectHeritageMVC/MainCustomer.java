@@ -33,11 +33,11 @@ public class MainCustomer {
 		switch (option) {
 
 		case 1:
-			System.out.println("Inform the client name:");
+			System.out.println("Inform the Customer name:");
 			customer.setName(scan.next());
-			System.out.println("Now the client address:");
+			System.out.println("Now the Customer address:");
 			customer.setAddress(scan.next());
-			System.out.println("Now the status of the client (Type: true - I'm already a client || false - First contact):");
+			System.out.println("Type the new status (true -  The registration is positive || false - The registration is negative");
 			customer.setStatus(scan.nextBoolean());
 			System.out.println("Type the CPF:");
 			customer.setCpf(scan.next());
@@ -157,3 +157,5 @@ public class MainCustomer {
 	}
 
 }
+
+

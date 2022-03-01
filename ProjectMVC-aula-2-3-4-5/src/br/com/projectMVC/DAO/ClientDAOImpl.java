@@ -33,7 +33,7 @@ import br.com.projectMVC.util.ConnectionFactory;
 			
 			ResultSet rs = null;
 			
-			String sql = "SELECT * FROM client ORDER by description";
+			String sql = "SELECT * FROM client ORDER by id";
 
 			try {
 				

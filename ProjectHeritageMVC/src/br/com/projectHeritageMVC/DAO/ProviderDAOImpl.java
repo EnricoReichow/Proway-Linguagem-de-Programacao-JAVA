@@ -118,7 +118,7 @@ public class ProviderDAOImpl implements GenericDAO {
 
 		PreparedStatement stmt = null;
 
-		String sql = "INSERT INTO provider (name,address,status) VALUES (?,?,?,?,?)";                            
+		String sql = "INSERT INTO provider (name,address,status,cnpj,openCapital) VALUES (?,?,?,?,?)";                            
 		try {
 
 			stmt = conn.prepareStatement(sql);
