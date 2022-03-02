@@ -80,7 +80,7 @@ public class ProviderDAOImpl implements GenericDAO {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 
-		String sql = "SELECT * FROM customer WHERE id = ?";
+		String sql = "SELECT * FROM provider WHERE id = ?";
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, id);
