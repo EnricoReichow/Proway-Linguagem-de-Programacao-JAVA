@@ -96,7 +96,7 @@ import br.com.projectMVC.util.ConnectionFactory;
 				}
 
 			} catch (Exception e) {
-				System.out.println("Problems in the DAO to load Product! ERROR: " + e.getMessage());
+				System.out.println("Problems in the DAO to load Client! ERROR: " + e.getMessage());
 				e.printStackTrace();
 			} finally {
 				try {
