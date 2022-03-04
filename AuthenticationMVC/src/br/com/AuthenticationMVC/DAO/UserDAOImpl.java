@@ -206,8 +206,8 @@ import br.com.AuthenticationMVC.util.ConnectionFactory;
 		
 		try {
 			stmt = conn.prepareStatement(sql);
-			stmt.setString(1, sql);
-			stmt.setString(2, sql);
+			stmt.setString(1, email);
+			stmt.setString(2, password);
 			rs = stmt.executeQuery();
 			
 			if (rs.next()) {
