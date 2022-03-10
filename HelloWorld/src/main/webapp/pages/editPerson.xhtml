@@ -5,29 +5,31 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Project JSF</title>
+	<title>My Project JSF</title>
 </h:head>
 <h:body>
-	<h2>Person Registration</h2>
+	<h2>Edit Person Info</h2>
 	<h:form>
 		<h:panelGrid columns="2">
+
+			<h:outputText value="ID" />
+			<h:inputText value="#{personBean.person.id}" readonly="true" />
 
 			<h:outputText value="Name" />
 			<h:inputText value="#{personBean.person.name}" />
 
 			<h:outputText value="Job" />
 			<h:inputText value="#{personBean.person.job}" />
-			
+
 			<h:outputText value="Age" />
 			<h:inputText value="#{personBean.person.age}" />
-			
+
 			<h:outputText value="City" />
 			<h:inputText value="#{personBean.person.city}" />
-			
+
 			<h:outputText />
-			<h:commandButton value="Add" action="#{personBean.add}" />
-			
-			
+			<h:commandButton value="Save" action="#{personBean.edit}" />
+
 		</h:panelGrid>
 
 	</h:form>

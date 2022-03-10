@@ -5,9 +5,21 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>My project JSF</title>
+	<title>My project JSF - Menu</title>
+	<style>
+li {
+	list-style-type: none;
+	margin-top: 15px;
+}
+</style>
 </h:head>
 <h:body>
-	<h1 class="hello">Hello World!</h1>
+	<h1 class="hello">System JSF:</h1>
+	<ul>
+		<li><h:button value="Register Person"
+				outcome="/pages/personRegistration.xhtml" /></li>
+		<li><h:button value="List People"
+				outcome="/pages/listPeople.xhtml" /></li>
+	</ul>
 </h:body>
 </html>

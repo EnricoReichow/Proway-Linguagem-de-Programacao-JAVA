@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>My project JSF</title>
+</h:head>
+<h:body>
+	<h2>Listing People</h2>
+	<h:form>
+		<h:dataTable value="#{personBean.people}" var="person">
+
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+			#{person.id}
+		</h:column>
+			<br />
+			<h:column>
+				<f:facet name="header">Name</f:facet>
+			#{person.name}
+		</h:column>
+
+			<h:column>
+				<f:facet name="header">Job</f:facet>
+			#{person.job}
+		</h:column>
+
+			<h:column>
+				<f:facet name="header">Age</f:facet>
+			#{person.age}
+		</h:column>
+
+			<h:column>
+				<f:facet name="header">City</f:facet>
+			#{person.city}
+		</h:column>
+
+			<h:column>
+				<h:commandButton value="Edit" action="#{personBean.editScreen}"
+					actionListener="#{personBean.loadEdits}">
+					<f:attribute name="person" value="#{person}" />
+				</h:commandButton>
+			</h:column>
+
+			<h:column>
+				<h:commandButton value="Delete" action="#{personBean.delete(person)}" />
+			</h:column>
+
+		</h:dataTable>
+	</h:form>
+
+	<h:button style="margin-top: 20px" value="Menu" outcome="/menu.xhtml" />
+
+</h:body>
+</html>
