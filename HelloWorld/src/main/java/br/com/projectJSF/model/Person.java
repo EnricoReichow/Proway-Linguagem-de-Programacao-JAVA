@@ -1,6 +1,7 @@
 package br.com.projectJSF.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Person implements Serializable {
 
@@ -71,14 +72,7 @@ public class Person implements Serializable {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((age == null) ? 0 : age.hashCode());
-		result = prime * result + ((city == null) ? 0 : city.hashCode());
-		result = prime * result + id;
-		result = prime * result + ((job == null) ? 0 : job.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		return result;
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -90,31 +84,7 @@ public class Person implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		if (age == null) {
-			if (other.age != null)
-				return false;
-		} else if (!age.equals(other.age))
-			return false;
-		if (city == null) {
-			if (other.city != null)
-				return false;
-		} else if (!city.equals(other.city))
-			return false;
-		if (id != other.id)
-			return false;
-		if (job == null) {
-			if (other.job != null)
-				return false;
-		} else if (!job.equals(other.job))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
+		return id == other.id;
 	}
-
 	
-		
 }

@@ -38,17 +38,20 @@ public class PersonBean implements Serializable {
 	}
 
 	public String edit() {
+//		int index = people.indexOf(person);
+//		Person p = person;
+//
+//		for (Person p2 : people) {
+//			if (p2.getId() == person.getId()) {
+//				index = people.indexOf(p2);
+//			}
+//		}
+		
 		int index = people.indexOf(person);
 		Person p = person;
-
-		for (Person p2 : people) {
-			if (p2.getId() == person.getId()) {
-				index = people.indexOf(p2);
-			}
-		}
-
 		people.set(index, p);
 		person = new Person();
+		
 		return "/pages/listPeople.xhtml";
 	}
 
@@ -65,6 +68,10 @@ public class PersonBean implements Serializable {
 		person.setJob(p.getJob());
 		person.setCity(p.getCity());
 
+	}
+	
+	public String exitEdit() {
+		
 	}
 
 	public Person getPerson() {
