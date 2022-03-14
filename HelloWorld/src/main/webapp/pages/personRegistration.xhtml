@@ -39,12 +39,14 @@ body .ui-panelgrid .ui-panelgrid-cell {
 
 			<h2>Person Registration</h2>
 
-			<p:panelGrid columns="2"
-				columnClasses="ui-grid-col-4, ui-grid-col-10" layout="grid"
+			<p:panelGrid 
+				columns="2"
+				columnClasses="ui-grid-col-4, ui-grid-col-10" 
+				layout="grid"
 				styleClass="ui-panelgrid-blank-ui-fluid"
 				style="border:0px none; background-color:transparent;">
 
-				<p:row styleClass="my-heading-row">
+				<p:row styleClass="my-heading-row" style="font-weight: bold">
 					Personal Info
 				</p:row>
 
@@ -54,7 +56,8 @@ body .ui-panelgrid .ui-panelgrid-cell {
 				<p:outputLabel value="Age" />
 				<p:spinner id="basic" value="#{personBean.person.age}" />
 
-				<p:row id="my-row-id" styleClass="my-heading-row"
+				<p:row id="my-row-id" 
+					styleClass="my-heading-row"
 					style="font-weight: bold">
 					Aditional
 				</p:row>

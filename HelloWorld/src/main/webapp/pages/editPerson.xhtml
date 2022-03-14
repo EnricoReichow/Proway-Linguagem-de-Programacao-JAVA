@@ -27,7 +27,8 @@ body .ui-panelgrid .ui-panelgrid-cell {
 	background-color: var(- -surface-c);
 	font-weight: bold;
 }
-.card{
+
+.card {
 	width: 500px;
 	margin: auto;
 }
@@ -37,14 +38,14 @@ body .ui-panelgrid .ui-panelgrid-cell {
 	<div class="card">
 		<h:form>
 
-			<h2>Person Registration</h2>
+			<h3>Edit Informations</h3>
 
 			<p:panelGrid columns="2"
 				columnClasses="ui-grid-col-4, ui-grid-col-10" layout="grid"
 				styleClass="ui-panelgrid-blank-ui-fluid"
 				style="border:0px none; background-color:transparent;">
 
-				<p:row styleClass="my-heading-row">
+				<p:row styleClass="my-heading-row" style="font-weight: bold">
 					Personal Info
 				</p:row>
 
@@ -81,9 +82,7 @@ body .ui-panelgrid .ui-panelgrid-cell {
 
 				<p:row>
 					<p:column styleClass="ui-grid-col-12" style="text-align: center">
-						<p:commandButton 
-							value="Save" 
-							action="#{pessoaBean.add}"
+						<p:commandButton value="Save" action="#{pessoaBean.add}"
 							styleClass="ui-button-primary"
 							style="width: auto; margin-right: 10px" />
 

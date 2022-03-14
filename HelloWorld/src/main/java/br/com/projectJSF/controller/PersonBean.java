@@ -70,10 +70,6 @@ public class PersonBean implements Serializable {
 
 	}
 	
-	public String exitEdit() {
-		
-	}
-
 	public Person getPerson() {
 		return person;
 	}
